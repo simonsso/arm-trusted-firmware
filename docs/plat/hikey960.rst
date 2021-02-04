@@ -33,6 +33,7 @@ Build Procedure
    Make all the repositories in the same ${BUILD\_PATH}.
 
   .. code:: shell
+
        export BUILD_PATH=$PWD
        git clone https://github.com/ARM-software/arm-trusted-firmware
        git clone https://github.com/OP-TEE/optee_os

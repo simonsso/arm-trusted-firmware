@@ -33,7 +33,7 @@ Build Procedure
    Make all the repositories in the same ${BUILD\_PATH}.
 
   .. code:: shell
-
+       export BUILD_PATH=$PWD
        git clone https://github.com/ARM-software/arm-trusted-firmware
        git clone https://github.com/OP-TEE/optee_os
        git clone https://github.com/96boards-hikey/edk2 -b testing/hikey960_v2.5

@@ -45,8 +45,8 @@ Build Procedure
 
    .. code:: shell
 
-       $cd ${BUILD_PATH}/edk2
-       $ln -sf ../OpenPlatformPkg
+       cd ${BUILD_PATH}/edk2
+       ln -sf ../OpenPlatformPkg
 
 -  Prepare AARCH64 toolchain.
 
@@ -103,14 +103,14 @@ Setup Console
 
    .. code:: shell
 
-       $sudo killall ser2net
-       $sudo ser2net -u
+       sudo killall ser2net
+       sudo ser2net -u
 
 -  Open the console.
 
    .. code:: shell
 
-       $telnet localhost 2004
+       telnet localhost 2004
 
    And you could open the console remotely, too.
 
@@ -124,10 +124,10 @@ Boot UEFI in recovery mode
 
    .. code:: shell
 
-       $cd tools-images-hikey960
-       $ln -sf ${BUILD_PATH}/l-loader/l-loader.bin
-       $ln -sf ${BUILD_PATH}/l-loader/fip.bin
-       $ln -sf ${BUILD_PATH}/l-loader/recovery.bin
+       cd tools-images-hikey960
+       ln -sf ${BUILD_PATH}/l-loader/l-loader.bin
+       ln -sf ${BUILD_PATH}/l-loader/fip.bin
+       ln -sf ${BUILD_PATH}/l-loader/recovery.bin
 
 -  Prepare config file.
 
@@ -143,13 +143,13 @@ Boot UEFI in recovery mode
 
    .. code:: shell
 
-       $sudo apt-get purge modemmanager
+       sudo apt-get purge modemmanager
 
 -  Run the command to download recovery.bin into HiKey960.
 
    .. code:: shell
 
-       $sudo ./hikey_idt -c config -p /dev/ttyUSB1
+       sudo ./hikey_idt -c config -p /dev/ttyUSB1
 
 -  UEFI running in recovery mode.
    When prompt '.' is displayed on console, press hotkey 'f' in keyboard. Then Android fastboot app is running.
@@ -159,14 +159,14 @@ Boot UEFI in recovery mode
 
    .. code:: shell
 
-       $sudo fastboot flash ptable prm_ptable.img
-       $sudo fastboot flash xloader sec_xloader.img
-       $sudo fastboot flash fastboot l-loader.bin
-       $sudo fastboot flash fip fip.bin
-       $sudo fastboot flash boot boot.img
-       $sudo fastboot flash cache cache.img
-       $sudo fastboot flash system system.img
-       $sudo fastboot flash userdata userdata.img
+       sudo fastboot flash ptable prm_ptable.img
+       sudo fastboot flash xloader sec_xloader.img
+       sudo fastboot flash fastboot l-loader.bin
+       sudo fastboot flash fip fip.bin
+       sudo fastboot flash boot boot.img
+       sudo fastboot flash cache cache.img
+       sudo fastboot flash system system.img
+       sudo fastboot flash userdata userdata.img
 
 -  Notice: UEFI could also boot kernel in recovery mode, but BL31 isn't loaded in
    recovery mode.

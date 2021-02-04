@@ -34,7 +34,7 @@ Build Procedure
 
   .. code:: shell
 
-       git clone https://github.com/ARM-software/arm-trusted-firmware -b integration
+       git clone https://github.com/ARM-software/arm-trusted-firmware
        git clone https://github.com/OP-TEE/optee_os
        git clone https://github.com/96boards-hikey/edk2 -b testing/hikey960_v2.5
        git clone https://github.com/96boards-hikey/OpenPlatformPkg -b testing/hikey960_v1.3.4

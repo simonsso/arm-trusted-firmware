@@ -62,7 +62,7 @@ Build Procedure
 
    .. code:: shell
 
-       cd {BUILD_PATH}/arm-trusted-firmware
+       cd ${BUILD_PATH}/arm-trusted-firmware
        sh ../l-loader/build_uefi.sh hikey960
 
 -  Generate l-loader.bin and partition table.
